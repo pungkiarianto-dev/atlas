@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gap Assessment — Harmonie (Atlas GRC)</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* override for full-height layout */
+  body { overflow: hidden; }
+  .assessment-shell { height: calc(100vh - 56px); }
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">H</div>
+        <div>
+          <div class="sidebar-brand-name">Harmonie</div>
+          <div class="sidebar-brand-sub">Atlas GRC Platform</div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-project-ctx">
+      <div class="ctx-label">Project Aktif</div>
+      <div class="ctx-name">ABC Finance Group</div>
+      <div class="ctx-framework">ISO 27001:2022</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Overview</div>
+      <a href="project-detail.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Overview
+      </a>
+      <div class="nav-section-label" style="margin-top:8px">Modules</div>
+      <a href="gap-assessment.html" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Gap Assessment
+      </a>
+      <a href="implementation-checklist.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        Impl. Checklist
+      </a>
+      <a href="evidence-repository.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        Evidence Repository
+      </a>
+      <a href="tasks-findings.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tasks & Findings
+        <span class="nav-badge">3</span>
+      </a>
+      <a href="reports.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+        Reports
+      </a>
+      <div class="sidebar-divider"></div>
+      <a href="projects.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Semua Projects
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar av-blue">AK</div>
+        <div>
+          <div class="user-name">Anya Kusuma</div>
+          <div class="user-role">Senior Consultant</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <a href="project-detail.html" class="topbar-back">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        Kembali
+      </a>
+      <div class="topbar-title-area">
+        <div class="topbar-title">PT ABC Finance Group</div>
+        <div class="topbar-subtitle">ISO 27001:2022</div>
+      </div>
+      <div class="topbar-actions">
+        <input type="date" class="date-input" value="2025-01-15">
+        <span style="color:#cbd5e1;font-size:12px">—</span>
+        <input type="date" class="date-input" value="2025-04-30">
+        <span class="saved-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+          Tersimpan
+        </span>
+        <button class="btn btn-primary btn-sm">Simpan</button>
+      </div>
+    </div>
+
+    <!-- ASSESSMENT BODY -->
+    <div class="assessment-shell" style="display:flex">
+
+      <!-- CLAUSE NAV (left) -->
+      <div class="clause-nav">
+        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:#94a3b8;padding:4px 8px 8px">Klausul</div>
+
+        <a href="#klausul4" class="clause-nav-item active">
+          <div class="clause-score-dot dot-green"></div>
+          <span class="clause-nav-label">4 — Konteks</span>
+          <span class="clause-nav-score" style="color:#15803d">100%</span>
+        </a>
+        <a href="#klausul5" class="clause-nav-item">
+          <div class="clause-score-dot dot-green"></div>
+          <span class="clause-nav-label">5 — Kepemimpinan</span>
+          <span class="clause-nav-score" style="color:#15803d">100%</span>
+        </a>
+        <a href="#klausul6" class="clause-nav-item">
+          <div class="clause-score-dot dot-amber"></div>
+          <span class="clause-nav-label">6 — Perencanaan</span>
+          <span class="clause-nav-score" style="color:#d97706">25%</span>
+        </a>
+        <a href="#klausul7" class="clause-nav-item">
+          <div class="clause-score-dot dot-green"></div>
+          <span class="clause-nav-label">7 — Dukungan</span>
+          <span class="clause-nav-score" style="color:#15803d">83%</span>
+        </a>
+        <a href="#klausul8" class="clause-nav-item">
+          <div class="clause-score-dot dot-red"></div>
+          <span class="clause-nav-label">8 — Operasional</span>
+          <span class="clause-nav-score" style="color:#dc2626">0%</span>
+        </a>
+        <a href="#klausul9" class="clause-nav-item">
+          <div class="clause-score-dot dot-red"></div>
+          <span class="clause-nav-label">9 — Evaluasi</span>
+          <span class="clause-nav-score" style="color:#dc2626">0%</span>
+        </a>
+        <a href="#klausul10" class="clause-nav-item">
+          <div class="clause-score-dot dot-amber"></div>
+          <span class="clause-nav-label">10 — Peningkatan</span>
+          <span class="clause-nav-score" style="color:#d97706">25%</span>
+        </a>
+
+        <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:#94a3b8;padding:12px 8px 6px">Annex A</div>
+        <a href="#annexA5" class="clause-nav-item">
+          <div class="clause-score-dot dot-amber"></div>
+          <span class="clause-nav-label">A.5 — Org</span>
+          <span class="clause-nav-score" style="color:#d97706">40%</span>
+        </a>
+        <a href="#annexA6" class="clause-nav-item">
+          <div class="clause-score-dot dot-amber"></div>
+          <span class="clause-nav-label">A.6 — People</span>
+          <span class="clause-nav-score" style="color:#d97706">55%</span>
+        </a>
+        <a href="#annexA7" class="clause-nav-item">
+          <div class="clause-score-dot dot-red"></div>
+          <span class="clause-nav-label">A.7 — Fisik</span>
+          <span class="clause-nav-score" style="color:#dc2626">20%</span>
+        </a>
+        <a href="#annexA8" class="clause-nav-item">
+          <div class="clause-score-dot dot-red"></div>
+          <span class="clause-nav-label">A.8 — Teknologi</span>
+          <span class="clause-nav-score" style="color:#dc2626">15%</span>
+        </a>
+      </div>
+
+      <!-- CENTER — Assessment Table -->
+      <div class="assessment-center">
+
+        <!-- Table header row -->
+        <div style="display:grid;grid-template-columns:40px 1fr 220px 150px;padding:8px 16px;background:#f8fafc;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:20">
+          <div style="font-size:10.5px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:0.4px">No</div>
+          <div style="font-size:10.5px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:0.4px">Persyaratan</div>
+          <div style="font-size:10.5px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:0.4px">Catatan / Bukti</div>
+          <div style="font-size:10.5px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:0.4px">Status</div>
+        </div>
+
+        <!-- KLAUSUL 4 -->
+        <div class="clause-group" id="klausul4">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 4 — Konteks Organisasi</span>
+            <span class="clause-group-count">3/3 dinilai</span>
+            <span class="badge badge-implemented" style="font-size:10px;margin-left:auto">100%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">4.1</div>
+            <div class="req-content">
+              <div class="req-title">Konteks organisasi</div>
+              <div class="req-desc">Isu internal dan eksternal yang relevan telah diidentifikasi dan dipahami.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">4.2</div>
+            <div class="req-content">
+              <div class="req-title">Kebutuhan pihak berkepentingan</div>
+              <div class="req-desc">Pihak berkepentingan beserta kebutuhan dan ekspektasinya telah dipetakan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">Dokumen SWOT dan stakeholder analysis tersedia.</textarea>
+            <div>
+              <select class="status-select" style="background:#fef3c7;color:#b45309;border-color:#fcd34d" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial" selected>~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">4.3</div>
+            <div class="req-content">
+              <div class="req-title">Ruang lingkup ISMS</div>
+              <div class="req-desc">Scope statement telah didokumentasikan dengan batas dan antarmuka yang jelas.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">IS-SCO-001 v1.2 telah disetujui Direktur.</textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- KLAUSUL 5 -->
+        <div class="clause-group" id="klausul5">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 5 — Kepemimpinan</span>
+            <span class="clause-group-count">3/3 dinilai</span>
+            <span class="badge badge-implemented" style="font-size:10px;margin-left:auto">100%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">5.1</div>
+            <div class="req-content">
+              <div class="req-title">Kepemimpinan & komitmen</div>
+              <div class="req-desc">Manajemen puncak menunjukkan komitmen aktif terhadap ISMS.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">MOM Kick-off meeting + SK ISMS tersedia.</textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">5.2</div>
+            <div class="req-content">
+              <div class="req-title">Kebijakan keamanan informasi</div>
+              <div class="req-desc">Kebijakan telah ditetapkan, dikomunikasikan, dan dipelihara secara berkala.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">IS-POL-001 v2.0, efektif 1 Jan 2025.</textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">5.3</div>
+            <div class="req-content">
+              <div class="req-title">Peran & tanggung jawab</div>
+              <div class="req-desc">Peran ISMS telah ditetapkan dan dikomunikasikan ke seluruh organisasi.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">Struktur org ISMS + RACI matrix terlampir.</textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- KLAUSUL 6 -->
+        <div class="clause-group" id="klausul6">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 6 — Perencanaan</span>
+            <span class="clause-group-count">2/2 dinilai</span>
+            <span class="badge badge-partial" style="font-size:10px;margin-left:auto">25%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">6.1</div>
+            <div class="req-content">
+              <div class="req-title">Manajemen risiko</div>
+              <div class="req-desc">Proses risk assessment dan risk treatment telah ditetapkan dan diterapkan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">Draft metodologi tersedia, belum disetujui.</textarea>
+            <div>
+              <select class="status-select" style="background:#fef3c7;color:#b45309;border-color:#fcd34d" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial" selected>~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">6.2</div>
+            <div class="req-content">
+              <div class="req-title">Tujuan keamanan informasi</div>
+              <div class="req-desc">Tujuan ISMS telah ditetapkan secara terukur dan dikomunikasikan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" style="background:#fee2e2;color:#b91c1c;border-color:#fca5a5" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- KLAUSUL 7 -->
+        <div class="clause-group" id="klausul7">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 7 — Dukungan</span>
+            <span class="clause-group-count">3/3 dinilai</span>
+            <span class="badge badge-implemented" style="font-size:10px;margin-left:auto">83%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">7.1</div>
+            <div class="req-content">
+              <div class="req-title">Sumber daya</div>
+              <div class="req-desc">Sumber daya yang diperlukan untuk ISMS telah ditentukan dan disediakan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">Budget ISMS disetujui dalam RAB 2025.</textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">7.2</div>
+            <div class="req-content">
+              <div class="req-title">Kompetensi</div>
+              <div class="req-desc">Kompetensi personil yang relevan telah ditentukan dan pelatihan dilaksanakan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">Training plan sudah ada, realisasi 60%.</textarea>
+            <div>
+              <select class="status-select" style="background:#fef3c7;color:#b45309;border-color:#fcd34d" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial" selected>~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">7.3</div>
+            <div class="req-content">
+              <div class="req-title">Kesadaran</div>
+              <div class="req-desc">Personil menyadari kebijakan ISMS dan kontribusinya terhadap efektivitas ISMS.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">Awareness training Q4 2024 selesai, presensi 95%.</textarea>
+            <div>
+              <select class="status-select" style="background:#dcfce7;color:#15803d;border-color:#86efac" onchange="updateStatus(this)">
+                <option value="implemented" selected>✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- KLAUSUL 8 -->
+        <div class="clause-group" id="klausul8">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 8 — Operasional</span>
+            <span class="clause-group-count">0/2 dinilai</span>
+            <span class="badge badge-not-implemented" style="font-size:10px;margin-left:auto">0%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">8.1</div>
+            <div class="req-content">
+              <div class="req-title">Perencanaan & pengendalian operasional</div>
+              <div class="req-desc">Proses yang diperlukan untuk memenuhi persyaratan ISMS telah direncanakan dan dikendalikan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">8.2</div>
+            <div class="req-content">
+              <div class="req-title">Information security risk assessment</div>
+              <div class="req-desc">Risk assessment dilaksanakan secara berkala dan saat perubahan signifikan terjadi.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- KLAUSUL 9 -->
+        <div class="clause-group" id="klausul9">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 9 — Evaluasi Kinerja</span>
+            <span class="clause-group-count">0/3 dinilai</span>
+            <span class="badge badge-not-implemented" style="font-size:10px;margin-left:auto">0%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">9.1</div>
+            <div class="req-content">
+              <div class="req-title">Pemantauan, pengukuran, analisis & evaluasi</div>
+              <div class="req-desc">Metode pemantauan kinerja ISMS telah ditetapkan dan dilaksanakan.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">9.2</div>
+            <div class="req-content">
+              <div class="req-title">Internal audit</div>
+              <div class="req-desc">Program internal audit telah ditetapkan dan audit dilaksanakan secara terjadwal.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">9.3</div>
+            <div class="req-content">
+              <div class="req-title">Management review</div>
+              <div class="req-desc">Tinjauan manajemen dilakukan secara berkala untuk memastikan kesesuaian dan efektivitas ISMS.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- KLAUSUL 10 -->
+        <div class="clause-group" id="klausul10">
+          <div class="clause-group-header">
+            <span class="clause-group-title">Klausul 10 — Peningkatan</span>
+            <span class="clause-group-count">1/2 dinilai</span>
+            <span class="badge badge-partial" style="font-size:10px;margin-left:auto">25%</span>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">10.1</div>
+            <div class="req-content">
+              <div class="req-title">Peningkatan berkelanjutan</div>
+              <div class="req-desc">Organisasi terus meningkatkan kesesuaian, kecukupan, dan efektivitas ISMS.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti...">PDCA cycle sudah dijalankan satu iterasi.</textarea>
+            <div>
+              <select class="status-select" style="background:#fef3c7;color:#b45309;border-color:#fcd34d" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial" selected>~ Partial</option>
+                <option value="not-implemented">✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="req-row">
+            <div class="req-number">10.2</div>
+            <div class="req-content">
+              <div class="req-title">Ketidaksesuaian & tindakan korektif</div>
+              <div class="req-desc">Ketidaksesuaian ditangani dan tindakan korektif dilaksanakan serta dievaluasi efektivitasnya.</div>
+            </div>
+            <textarea class="req-notes" placeholder="Tambah catatan atau referensi bukti..."></textarea>
+            <div>
+              <select class="status-select" onchange="updateStatus(this)">
+                <option value="implemented">✓ Implemented</option>
+                <option value="partial">~ Partial</option>
+                <option value="not-implemented" selected>✗ Not Implemented</option>
+                <option value="na">— Not Applicable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /assessment-center -->
+
+      <!-- RIGHT PANEL -->
+      <div class="assessment-right">
+
+        <!-- Spider Chart -->
+        <div class="right-panel-title">Spider Chart</div>
+        <div class="spider-chart-wrap">
+          <svg width="160" height="150" viewBox="0 0 160 150">
+            <!-- Background rings -->
+            <polygon points="80,20 130,47.5 130,102.5 80,130 30,102.5 30,47.5" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+            <polygon points="80,35 117.5,56.25 117.5,96.25 80,117.5 42.5,96.25 42.5,56.25" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+            <polygon points="80,50 105,65 105,90 80,105 55,90 55,65" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+            <!-- Axis lines -->
+            <line x1="80" y1="75" x2="80" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="80" y1="75" x2="130" y2="47.5" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="80" y1="75" x2="130" y2="102.5" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="80" y1="75" x2="80" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="80" y1="75" x2="30" y2="102.5" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="80" y1="75" x2="30" y2="47.5" stroke="#e2e8f0" stroke-width="1"/>
+            <!-- Data polygon: Konteks=100%, Kepemimpinan=100%, Perencanaan=25%, Dukungan=83%, Operasional=0%, Evaluasi=0%, Peningkatan=25% -->
+            <!-- 6 axes for: Konteks, Kepemimpinan, Perencanaan, Dukungan, Operasional, Evaluasi -->
+            <!-- Full = outer ring: 80,20 / 130,47.5 / 130,102.5 / 80,130 / 30,102.5 / 30,47.5 -->
+            <!-- Konteks(top)=1.0→80,20; Kepemimpinan(top-right)=1.0→130,47.5; Perencanaan(bot-right)=0.25→calc; Dukungan(bot)=0.83→calc; Operasional(bot-left)=0; Evaluasi(top-left)=0 -->
+            <!-- Calc: center=80,75; each axis direction, scale by pct -->
+            <!-- K-pimpinan(TR): 80+(130-80)*1.0=130, 75+(47.5-75)*1.0=47.5 -->
+            <!-- Perencanaan(BR): 80+(130-80)*0.25=92.5, 75+(102.5-75)*0.25=81.9 -->
+            <!-- Dukungan(B): 80+(80-80)*0.83=80, 75+(130-75)*0.83=120.65 -->
+            <!-- Operasional(BL): 80+(30-80)*0=80, 75+(102.5-75)*0=75 -->
+            <!-- Evaluasi(TL): 80+(30-80)*0=80, 75+(47.5-75)*0=75 -->
+            <!-- Konteks(T): 80+(80-80)*1=80, 75+(20-75)*1=20 -->
+            <polygon points="80,20 130,47.5 92.5,81.9 80,120.65 80,75 80,75"
+              fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="1.5"/>
+            <!-- Labels -->
+            <text x="80" y="14" text-anchor="middle" font-size="8.5" fill="#475569" font-family="Plus Jakarta Sans, sans-serif">Konteks</text>
+            <text x="136" y="46" text-anchor="start" font-size="8.5" fill="#475569" font-family="Plus Jakarta Sans, sans-serif">Kepemimp.</text>
+            <text x="136" y="108" text-anchor="start" font-size="8.5" fill="#475569" font-family="Plus Jakarta Sans, sans-serif">Perenc.</text>
+            <text x="80" y="142" text-anchor="middle" font-size="8.5" fill="#475569" font-family="Plus Jakarta Sans, sans-serif">Dukungan</text>
+            <text x="24" y="108" text-anchor="end" font-size="8.5" fill="#475569" font-family="Plus Jakarta Sans, sans-serif">Operasional</text>
+            <text x="24" y="46" text-anchor="end" font-size="8.5" fill="#475569" font-family="Plus Jakarta Sans, sans-serif">Evaluasi</text>
+          </svg>
+        </div>
+
+        <!-- Rekap per Klausul -->
+        <div class="right-panel-title" style="margin-top:14px">Rekap per Klausul</div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Konteks</span>
+            <span class="rekap-pct" style="color:#15803d">83%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-green" style="width:83%"></div>
+          </div>
+        </div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Kepemimpinan</span>
+            <span class="rekap-pct" style="color:#15803d">100%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-green" style="width:100%"></div>
+          </div>
+        </div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Perencanaan</span>
+            <span class="rekap-pct" style="color:#dc2626">25%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-red" style="width:25%"></div>
+          </div>
+        </div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Dukungan</span>
+            <span class="rekap-pct" style="color:#15803d">83%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-green" style="width:83%"></div>
+          </div>
+        </div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Operasional</span>
+            <span class="rekap-pct" style="color:#94a3b8">0%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-green" style="width:0%"></div>
+          </div>
+        </div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Evaluasi</span>
+            <span class="rekap-pct" style="color:#94a3b8">0%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-green" style="width:0%"></div>
+          </div>
+        </div>
+
+        <div class="rekap-item">
+          <div class="rekap-label">
+            <span class="rekap-name">Peningkatan</span>
+            <span class="rekap-pct" style="color:#dc2626">25%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill fill-red" style="width:25%"></div>
+          </div>
+        </div>
+
+        <!-- Status Legend -->
+        <div class="status-legend">
+          <div class="right-panel-title" style="margin-bottom:8px">Keterangan Status</div>
+          <div class="legend-item">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div class="legend-dot" style="background:#dcfce7;border:1px solid #86efac"></div>
+              <span>Implemented</span>
+            </div>
+            <span style="font-weight:700;color:#15803d">100%</span>
+          </div>
+          <div class="legend-item">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div class="legend-dot" style="background:#fef3c7;border:1px solid #fcd34d"></div>
+              <span>Partial</span>
+            </div>
+            <span style="font-weight:700;color:#b45309">50%</span>
+          </div>
+          <div class="legend-item">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div class="legend-dot" style="background:#fee2e2;border:1px solid #fca5a5"></div>
+              <span>Not Implemented</span>
+            </div>
+            <span style="font-weight:700;color:#dc2626">0%</span>
+          </div>
+          <div class="legend-item">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div class="legend-dot" style="background:#f1f5f9;border:1px solid #cbd5e1"></div>
+              <span>Not Applicable</span>
+            </div>
+            <span style="font-weight:700;color:#64748b">—</span>
+          </div>
+        </div>
+
+      </div><!-- /assessment-right -->
+
+    </div><!-- /assessment-shell -->
+  </div>
+</div>
+
+<script>
+function updateStatus(select) {
+  const val = select.value;
+  const colors = {
+    'implemented': { bg:'#dcfce7', color:'#15803d', border:'#86efac' },
+    'partial': { bg:'#fef3c7', color:'#b45309', border:'#fcd34d' },
+    'not-implemented': { bg:'#fee2e2', color:'#b91c1c', border:'#fca5a5' },
+    'na': { bg:'#f1f5f9', color:'#64748b', border:'#cbd5e1' }
+  };
+  const c = colors[val];
+  select.style.background = c.bg;
+  select.style.color = c.color;
+  select.style.borderColor = c.border;
+}
+</script>
+</body>
+</html>

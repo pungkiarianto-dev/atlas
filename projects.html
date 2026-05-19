@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Harmonie (Atlas GRC)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">H</div>
+        <div>
+          <div class="sidebar-brand-name">Harmonie</div>
+          <div class="sidebar-brand-sub">Atlas GRC Platform</div>
+        </div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Utama</div>
+      <a href="index.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="projects.html" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Projects
+        <span class="nav-badge">3</span>
+      </a>
+      <div class="sidebar-divider"></div>
+      <div class="nav-section-label">Library</div>
+      <a href="knowledge-base.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Knowledge Base
+      </a>
+      <a href="template-documents.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        Template Dokumen
+      </a>
+      <div class="sidebar-divider"></div>
+      <div class="nav-section-label">Sistem</div>
+      <a href="users-roles.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Users & Roles
+      </a>
+      <a href="reports.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Reports
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar av-blue">AK</div>
+        <div>
+          <div class="user-name">Anya Kusuma</div>
+          <div class="user-role">Senior Consultant</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <div class="topbar">
+      <div class="topbar-title-area">
+        <div class="topbar-title">Projects</div>
+        <div class="topbar-subtitle">3 engagement aktif</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Cari project atau klien...">
+        </div>
+        <button class="btn btn-secondary btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="10" y2="18"/></svg>
+          Filter
+        </button>
+        <button class="btn btn-primary btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Project
+        </button>
+      </div>
+    </div>
+
+    <div class="page-content">
+
+      <!-- Filter chips -->
+      <div class="filter-bar mb-20">
+        <button class="btn btn-secondary btn-sm" style="background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8">Semua (3)</button>
+        <button class="btn btn-ghost btn-sm">On Track (1)</button>
+        <button class="btn btn-ghost btn-sm">In Progress (1)</button>
+        <button class="btn btn-ghost btn-sm">Delayed (1)</button>
+        <div style="width:1px;height:20px;background:#e2e8f0;margin:0 4px"></div>
+        <button class="btn btn-ghost btn-sm">ISO 27001</button>
+        <button class="btn btn-ghost btn-sm">ISO 22301</button>
+        <button class="btn btn-ghost btn-sm">COBIT</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid-3">
+
+        <!-- Card 1 -->
+        <a href="project-detail.html" class="project-card">
+          <div class="project-card-top">
+            <div>
+              <div class="project-card-client">ABC Finance Group</div>
+              <div class="project-card-name">ISO 27001 Implementation</div>
+            </div>
+            <span class="badge badge-on-track">On Track</span>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+            <span class="badge-framework">ISO 27001:2022</span>
+            <span class="tag">Fintech</span>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+              <span style="font-size:11.5px;color:#475569;font-weight:500">Overall Compliance</span>
+              <span style="font-size:12px;font-weight:800;color:#2563eb">68%</span>
+            </div>
+            <div class="progress-bar-wrap" style="height:7px">
+              <div class="progress-bar-fill fill-blue" style="width:68%"></div>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <div style="display:flex;align-items:center;gap:5px">
+              <div class="avatar av-blue" style="width:20px;height:20px;font-size:8px">AK</div>
+              <span>Anya Kusuma</span>
+            </div>
+            <span>•</span>
+            <span>Start: 15 Jan 2025</span>
+            <span>•</span>
+            <span>Target: 30 Apr 2025</span>
+          </div>
+          <div style="display:flex;gap:8px;padding-top:6px;border-top:1px solid #f1f5f9">
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">83%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Gap Asm</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">60%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Risk Reg</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">45%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Docs</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#dc2626">3</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Findings</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="project-detail.html" class="project-card">
+          <div class="project-card-top">
+            <div>
+              <div class="project-card-client">Nusantara Manufacturing</div>
+              <div class="project-card-name">BCMS Certification</div>
+            </div>
+            <span class="badge badge-in-progress">In Progress</span>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+            <span class="badge-framework">ISO 22301:2019</span>
+            <span class="tag">Manufacturing</span>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+              <span style="font-size:11.5px;color:#475569;font-weight:500">Overall Compliance</span>
+              <span style="font-size:12px;font-weight:800;color:#d97706">41%</span>
+            </div>
+            <div class="progress-bar-wrap" style="height:7px">
+              <div class="progress-bar-fill fill-amber" style="width:41%"></div>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <div style="display:flex;align-items:center;gap:5px">
+              <div class="avatar av-violet" style="width:20px;height:20px;font-size:8px">BR</div>
+              <span>Budi Raharjo</span>
+            </div>
+            <span>•</span>
+            <span>Start: 1 Nov 2024</span>
+            <span>•</span>
+            <span>Target: 31 Mei 2025</span>
+          </div>
+          <div style="display:flex;gap:8px;padding-top:6px;border-top:1px solid #f1f5f9">
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">52%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Gap Asm</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">30%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Risk Reg</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">20%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Docs</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#dc2626">2</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Findings</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="project-detail.html" class="project-card">
+          <div class="project-card-top">
+            <div>
+              <div class="project-card-client">GovTech Digital Agency</div>
+              <div class="project-card-name">IT Governance Assessment</div>
+            </div>
+            <span class="badge badge-delayed">Delayed</span>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+            <span class="badge-framework" style="background:#faf5ff;color:#6d28d9;border-color:#c4b5fd">COBIT 2019</span>
+            <span class="tag">Government</span>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+              <span style="font-size:11.5px;color:#475569;font-weight:500">Overall Compliance</span>
+              <span style="font-size:12px;font-weight:800;color:#dc2626">22%</span>
+            </div>
+            <div class="progress-bar-wrap" style="height:7px">
+              <div class="progress-bar-fill fill-red" style="width:22%"></div>
+            </div>
+          </div>
+          <div class="project-card-meta">
+            <div style="display:flex;align-items:center;gap:5px">
+              <div class="avatar av-rose" style="width:20px;height:20px;font-size:8px">SP</div>
+              <span>Siti Pertiwi</span>
+            </div>
+            <span>•</span>
+            <span>Start: 1 Des 2024</span>
+            <span>•</span>
+            <span>Target: 30 Jun 2025</span>
+          </div>
+          <div style="display:flex;gap:8px;padding-top:6px;border-top:1px solid #f1f5f9">
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">25%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Gap Asm</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">10%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Risk Reg</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#0f172a">5%</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Docs</div>
+            </div>
+            <div style="flex:1;text-align:center">
+              <div style="font-size:14px;font-weight:800;color:#dc2626">2</div>
+              <div style="font-size:10px;color:#94a3b8;font-weight:500">Findings</div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

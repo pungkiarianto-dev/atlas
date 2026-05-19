@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence Repository — Harmonie (Atlas GRC)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">H</div>
+        <div><div class="sidebar-brand-name">Harmonie</div><div class="sidebar-brand-sub">Atlas GRC Platform</div></div>
+      </div>
+    </div>
+    <div class="sidebar-project-ctx">
+      <div class="ctx-label">Project Aktif</div>
+      <div class="ctx-name">ABC Finance Group</div>
+      <div class="ctx-framework">ISO 27001:2022</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Overview</div>
+      <a href="project-detail.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Overview</a>
+      <div class="nav-section-label" style="margin-top:8px">Modules</div>
+      <a href="gap-assessment.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Gap Assessment</a>
+      <a href="implementation-checklist.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        Impl. Checklist
+      </a>
+      <a href="evidence-repository.html" class="nav-item active"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Evidence Repository</a>
+      <a href="tasks-findings.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Tasks & Findings<span class="nav-badge">3</span></a>
+      <a href="reports.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>Reports</a>
+      <div class="sidebar-divider"></div>
+      <a href="projects.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>Semua Projects</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar av-blue">AK</div>
+        <div><div class="user-name">Anya Kusuma</div><div class="user-role">Senior Consultant</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <div class="topbar">
+      <a href="project-detail.html" class="topbar-back"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>Kembali</a>
+      <div class="topbar-title-area">
+        <div class="topbar-title">Evidence Repository</div>
+        <div class="topbar-subtitle">27 dari 93 kontrol terdokumentasi</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Cari kontrol atau evidence...">
+        </div>
+        <button class="btn btn-primary btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Upload Evidence
+        </button>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="flex gap-12 mb-20">
+        <div class="stat-card" style="flex:1"><div class="stat-label">Total Kontrol</div><div class="stat-value">93</div></div>
+        <div class="stat-card" style="flex:1"><div class="stat-label">Evidence Terkumpul</div><div class="stat-value" style="color:#2563eb">27</div></div>
+        <div class="stat-card" style="flex:1"><div class="stat-label">Pending Verifikasi</div><div class="stat-value" style="color:#d97706">8</div></div>
+        <div class="stat-card" style="flex:1"><div class="stat-label">Expired / Perlu Diperbarui</div><div class="stat-value" style="color:#dc2626">2</div></div>
+      </div>
+
+      <div class="card">
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kontrol</th>
+                <th>Nama Kontrol</th>
+                <th>Evidence</th>
+                <th>Tipe File</th>
+                <th>Diunggah Oleh</th>
+                <th>Tanggal</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag">A.5.15</span></td>
+                <td style="font-weight:600">Access control</td>
+                <td>IS-POL-001 Access Control Policy Signed.pdf</td>
+                <td><span class="tag">PDF</span></td>
+                <td><div style="display:flex;align-items:center;gap:6px"><div class="avatar av-blue" style="width:20px;height:20px;font-size:8px">AK</div><span style="font-size:12px">Anya K.</span></div></td>
+                <td style="color:#94a3b8;font-size:12px">10 Jan 2025</td>
+                <td><span class="badge badge-implemented">Verified</span></td>
+                <td><button class="btn btn-secondary btn-sm">Lihat</button></td>
+              </tr>
+              <tr>
+                <td><span class="tag">A.5.9</span></td>
+                <td style="font-weight:600">Inventory of information assets</td>
+                <td>Asset_Register_v3.xlsx</td>
+                <td><span class="tag">XLSX</span></td>
+                <td><div style="display:flex;align-items:center;gap:6px"><div class="avatar av-emerald" style="width:20px;height:20px;font-size:8px">DW</div><span style="font-size:12px">Dewa W.</span></div></td>
+                <td style="color:#94a3b8;font-size:12px">12 Jan 2025</td>
+                <td><span class="badge badge-partial">Pending</span></td>
+                <td><button class="btn btn-secondary btn-sm">Verifikasi</button></td>
+              </tr>
+              <tr>
+                <td><span class="tag">A.6.3</span></td>
+                <td style="font-weight:600">Information security awareness</td>
+                <td>Training_Attendance_Q4_2024.pdf</td>
+                <td><span class="tag">PDF</span></td>
+                <td><div style="display:flex;align-items:center;gap:6px"><div class="avatar av-blue" style="width:20px;height:20px;font-size:8px">AK</div><span style="font-size:12px">Anya K.</span></div></td>
+                <td style="color:#94a3b8;font-size:12px">5 Jan 2025</td>
+                <td><span class="badge badge-implemented">Verified</span></td>
+                <td><button class="btn btn-secondary btn-sm">Lihat</button></td>
+              </tr>
+              <tr>
+                <td><span class="tag">A.8.2</span></td>
+                <td style="font-weight:600">Privileged access rights</td>
+                <td>Admin_Account_Review_Dec2024.pdf</td>
+                <td><span class="tag">PDF</span></td>
+                <td><div style="display:flex;align-items:center;gap:6px"><div class="avatar av-violet" style="width:20px;height:20px;font-size:8px">BR</div><span style="font-size:12px">Budi R.</span></div></td>
+                <td style="color:#94a3b8;font-size:12px">3 Jan 2025</td>
+                <td><span class="badge badge-not-implemented" style="font-size:10px">Expired</span></td>
+                <td><button class="btn btn-danger btn-sm">Perbarui</button></td>
+              </tr>
+              <tr>
+                <td><span class="tag">A.5.16</span></td>
+                <td style="font-weight:600">Identity management</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td style="color:#94a3b8;font-size:12px">—</td>
+                <td><span class="badge badge-na">Belum Ada</span></td>
+                <td><button class="btn btn-primary btn-sm">Request</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

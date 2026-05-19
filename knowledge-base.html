@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Base — Harmonie (Atlas GRC)</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.kb-shell {
+  padding: 24px;
+}
+
+.kb-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.kb-title h1 {
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-0.8px;
+  margin-bottom:6px;
+}
+
+.kb-title p {
+  color: var(--text-secondary);
+  max-width: 760px;
+}
+
+.kb-actions {
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.kb-grid {
+  display:grid;
+  grid-template-columns: 260px 1fr;
+  gap:20px;
+}
+
+.kb-sidebar {
+  background:white;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:18px;
+  height:fit-content;
+  box-shadow: var(--card-shadow);
+}
+
+.kb-main {
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.kb-card {
+  background:white;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: var(--card-shadow);
+}
+
+.kb-search {
+  display:flex;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.kb-search input {
+  flex:1;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background:white;
+}
+
+.kb-search select {
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background:white;
+}
+
+.kb-category {
+  margin-bottom:18px;
+}
+
+.kb-category-title {
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  color: var(--text-muted);
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.kb-category a {
+  display:block;
+  padding:10px 12px;
+  border-radius:8px;
+  color: var(--text-secondary);
+  margin-bottom:6px;
+  transition: var(--transition);
+}
+
+.kb-category a:hover,
+.kb-category a.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight:600;
+}
+
+.article-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:16px;
+}
+
+.article-card {
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:16px;
+  transition: var(--transition);
+  background:white;
+}
+
+.article-card:hover {
+  transform:translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.article-meta {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.article-tag {
+  background: var(--primary-light);
+  color: var(--primary);
+  border:1px solid var(--primary-border);
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+}
+
+.article-date {
+  color: var(--text-muted);
+  font-size:12px;
+}
+
+.article-card h3 {
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.article-card p {
+  color: var(--text-secondary);
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+.article-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.article-author {
+  font-size:12px;
+  color: var(--text-muted);
+}
+
+.kb-stat-grid {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:14px;
+}
+
+.kb-stat {
+  background:white;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--card-shadow);
+}
+
+.kb-stat-value {
+  font-size:24px;
+  font-weight:800;
+  margin-bottom:4px;
+}
+
+.kb-stat-label {
+  color: var(--text-muted);
+  font-size:12px;
+}
+
+@media(max-width: 980px){
+  .kb-grid{
+    grid-template-columns:1fr;
+  }
+
+  .kb-stat-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kb-header{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">H</div>
+        <div>
+          <div class="sidebar-brand-name">Harmonie</div>
+          <div class="sidebar-brand-sub">Atlas GRC Platform</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Utama</div>
+
+      <a href="index.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+        </svg>
+        Dashboard
+      </a>
+
+      <a href="projects.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </svg>
+        Projects
+        <span class="nav-badge">3</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <div class="nav-section-label">Library</div>
+
+      <a href="knowledge-base.html" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+        Knowledge Base
+      </a>
+
+      <a href="template-documents.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14,2 14,8 20,8"/>
+        </svg>
+        Template Dokumen
+      </a>
+
+      <div class="sidebar-divider"></div>
+
+      <div class="nav-section-label">Sistem</div>
+
+      <a href="users-roles.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Users & Roles
+      </a>
+
+      <a href="reports.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14,2 14,8 20,8"/>
+        </svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar av-blue">AK</div>
+        <div>
+          <div class="user-name">Anya Kusuma</div>
+          <div class="user-role">Senior Consultant</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-content">
+
+    <div class="topbar">
+      <div class="topbar-title-area">
+        <div class="topbar-title">Knowledge Base</div>
+        <div class="topbar-subtitle">Repository panduan implementasi, best practice, dan referensi compliance.</div>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="template-documents.html" class="btn btn-secondary btn-sm">Template</a>
+        <a href="projects.html" class="btn btn-primary btn-sm">Buka Projects</a>
+      </div>
+    </div>
+
+    <div class="kb-shell">
+
+      <div class="kb-stat-grid">
+        <div class="kb-stat">
+          <div class="kb-stat-value">248</div>
+          <div class="kb-stat-label">Artikel & Guidance</div>
+        </div>
+
+        <div class="kb-stat">
+          <div class="kb-stat-value">32</div>
+          <div class="kb-stat-label">Framework Coverage</div>
+        </div>
+
+        <div class="kb-stat">
+          <div class="kb-stat-value">1,284</div>
+          <div class="kb-stat-label">Template Evidence</div>
+        </div>
+
+        <div class="kb-stat">
+          <div class="kb-stat-value">89%</div>
+          <div class="kb-stat-label">Knowledge Reuse</div>
+        </div>
+      </div>
+
+      <div class="kb-header">
+        <div class="kb-title">
+          <h1>Knowledge Center</h1>
+          <p>
+            Pusat referensi implementasi ISO 27001, ISO 27701, ISO 22301, ISO 20000-1,
+            audit preparation, evidence collection, risk treatment, dan governance best practices.
+          </p>
+        </div>
+
+        <div class="kb-actions">
+          <button class="btn btn-secondary">Import</button>
+          <button class="btn btn-primary">Tambah Artikel</button>
+        </div>
+      </div>
+
+      <div class="kb-grid">
+
+        <div class="kb-sidebar">
+          <div class="kb-category">
+            <div class="kb-category-title">Kategori</div>
+
+            <a href="#" class="active">ISO 27001</a>
+            <a href="#">ISO 27701</a>
+            <a href="#">ISO 22301</a>
+            <a href="#">ISO 20000-1</a>
+            <a href="#">Risk Management</a>
+            <a href="#">Audit & Assessment</a>
+            <a href="#">Awareness & Training</a>
+          </div>
+
+          <div class="kb-category">
+            <div class="kb-category-title">Quick Access</div>
+
+            <a href="gap-assessment.html">Gap Assessment</a>
+            <a href="implementation-checklist.html">Implementation Checklist</a>
+            <a href="evidence-repository.html">Evidence Repository</a>
+            <a href="tasks-findings.html">Tasks & Findings</a>
+            <a href="reports.html">Reports</a>
+          </div>
+        </div>
+
+        <div class="kb-main">
+
+          <div class="kb-card">
+            <div class="kb-search">
+              <input type="text" placeholder="Cari artikel, clause, atau kontrol...">
+              <select>
+                <option>Semua Framework</option>
+                <option>ISO 27001</option>
+                <option>ISO 27701</option>
+                <option>ISO 22301</option>
+              </select>
+            </div>
+
+            <div class="article-grid">
+
+              <div class="article-card">
+                <div class="article-meta">
+                  <span class="article-tag">ISO 27001</span>
+                  <span class="article-date">Update 2 hari lalu</span>
+                </div>
+
+                <h3>Panduan Implementasi Annex A 5.15</h3>
+
+                <p>
+                  Best practice implementasi access control policy, role segregation,
+                  dan contoh evidence minimum untuk audit.
+                </p>
+
+                <div class="article-footer">
+                  <span class="article-author">By Harmonie Research</span>
+                  <a href="template-documents-iso27001.html" class="btn btn-secondary btn-sm">Lihat</a>
+                </div>
+              </div>
+
+              <div class="article-card">
+                <div class="article-meta">
+                  <span class="article-tag">Risk Management</span>
+                  <span class="article-date">Update minggu ini</span>
+                </div>
+
+                <h3>Risk Treatment Plan Guidance</h3>
+
+                <p>
+                  Contoh risk treatment planning yang dapat langsung digunakan
+                  untuk project implementasi compliance.
+                </p>
+
+                <div class="article-footer">
+                  <span class="article-author">By Consulting Team</span>
+                  <a href="reports.html" class="btn btn-secondary btn-sm">Lihat</a>
+                </div>
+              </div>
+
+              <div class="article-card">
+                <div class="article-meta">
+                  <span class="article-tag">ISO 22301</span>
+                  <span class="article-date">Update bulan ini</span>
+                </div>
+
+                <h3>Business Impact Analysis Starter Kit</h3>
+
+                <p>
+                  Template dan langkah praktis melakukan Business Impact Analysis
+                  untuk kebutuhan BCM dan DRP.
+                </p>
+
+                <div class="article-footer">
+                  <span class="article-author">By BCM Specialist</span>
+                  <a href="template-documents-iso22301.html" class="btn btn-secondary btn-sm">Lihat</a>
+                </div>
+              </div>
+
+              <div class="article-card">
+                <div class="article-meta">
+                  <span class="article-tag">ISO 20000-1</span>
+                  <span class="article-date">Update 5 hari lalu</span>
+                </div>
+
+                <h3>IT Service Management Governance</h3>
+
+                <p>
+                  Framework dasar governance ITSM, service desk, SLA monitoring,
+                  dan service reporting.
+                </p>
+
+                <div class="article-footer">
+                  <span class="article-author">By ITSM Practice</span>
+                  <a href="template-documents-iso20000.html" class="btn btn-secondary btn-sm">Lihat</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Harmonie (Atlas GRC)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">H</div>
+        <div>
+          <div class="sidebar-brand-name">Harmonie</div>
+          <div class="sidebar-brand-sub">Atlas GRC Platform</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Utama</div>
+      <a href="index.html" class="nav-item active">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="projects.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Projects
+        <span class="nav-badge">3</span>
+      </a>
+
+      <div class="sidebar-divider"></div>
+      <div class="nav-section-label">Library</div>
+      <a href="knowledge-base.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Knowledge Base
+      </a>
+      <a href="template-documents.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        Template Dokumen
+      </a>
+      <div class="sidebar-divider"></div>
+      <div class="nav-section-label">Sistem</div>
+      <a href="users-roles.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Users & Roles
+      </a>
+      <a href="reports.html" class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="avatar av-blue">AK</div>
+        <div>
+          <div class="user-name">Anya Kusuma</div>
+          <div class="user-role">Senior Consultant</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-title-area">
+        <div class="topbar-title">Dashboard</div>
+        <div class="topbar-subtitle">Multi-tenant overview — Harmonie Atlas GRC</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" placeholder="Cari project, klien...">
+        </div>
+        <a href="projects.html" class="btn btn-primary btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Project
+        </a>
+      </div>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+
+      <!-- STAT CARDS -->
+      <div class="grid-4 mb-20">
+        <div class="stat-card">
+          <div class="stat-label">Active Projects</div>
+          <div class="stat-value">3</div>
+          <div class="stat-delta up">↑ 1 bulan ini</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Open Findings</div>
+          <div class="stat-value" style="color:#dc2626">7</div>
+          <div class="stat-delta down">4 high severity</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Avg Compliance</div>
+          <div class="stat-value" style="color:#2563eb">63%</div>
+          <div class="stat-delta up">↑ 5% dari snapshot lalu</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Consultants Active</div>
+          <div class="stat-value">4</div>
+          <div class="stat-delta">di 3 engagement</div>
+        </div>
+      </div>
+
+      <!-- PROJECTS TABLE + ACTIVITY -->
+      <div class="flex gap-20 mb-20" style="align-items:flex-start">
+
+        <!-- Projects overview -->
+        <div class="card" style="flex:1">
+          <div class="card-header">
+            <div class="card-title">Projects Aktif</div>
+            <a href="projects.html" class="btn btn-ghost btn-sm">Lihat Semua →</a>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Klien</th>
+                  <th>Framework</th>
+                  <th>Konsultan</th>
+                  <th>Compliance</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="font-weight:600">ABC Finance Group</div>
+                    <div style="font-size:11px;color:#94a3b8">ISO 27001 Implementation</div>
+                  </td>
+                  <td><span class="badge-framework">ISO 27001:2022</span></td>
+                  <td>
+                    <div style="display:flex;align-items:center;gap:7px">
+                      <div class="avatar av-blue" style="width:22px;height:22px;font-size:9px">AK</div>
+                      <span style="font-size:12px">Anya Kusuma</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <div class="progress-bar-wrap" style="width:80px">
+                        <div class="progress-bar-fill fill-blue" style="width:68%"></div>
+                      </div>
+                      <span style="font-size:12px;font-weight:700">68%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-on-track">On Track</span></td>
+                  <td><a href="project-detail.html" class="btn btn-secondary btn-sm">Buka</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight:600">Nusantara Manufacturing</div>
+                    <div style="font-size:11px;color:#94a3b8">BCMS Certification</div>
+                  </td>
+                  <td><span class="badge-framework">ISO 22301:2019</span></td>
+                  <td>
+                    <div style="display:flex;align-items:center;gap:7px">
+                      <div class="avatar av-violet" style="width:22px;height:22px;font-size:9px">BR</div>
+                      <span style="font-size:12px">Budi Raharjo</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <div class="progress-bar-wrap" style="width:80px">
+                        <div class="progress-bar-fill fill-amber" style="width:41%"></div>
+                      </div>
+                      <span style="font-size:12px;font-weight:700">41%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-in-progress">In Progress</span></td>
+                  <td><a href="project-detail.html" class="btn btn-secondary btn-sm">Buka</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="font-weight:600">GovTech Digital Agency</div>
+                    <div style="font-size:11px;color:#94a3b8">IT Governance Assessment</div>
+                  </td>
+                  <td><span class="badge-framework" style="background:#faf5ff;color:#6d28d9;border-color:#c4b5fd">COBIT 2019</span></td>
+                  <td>
+                    <div style="display:flex;align-items:center;gap:7px">
+                      <div class="avatar av-rose" style="width:22px;height:22px;font-size:9px">SP</div>
+                      <span style="font-size:12px">Siti Pertiwi</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <div class="progress-bar-wrap" style="width:80px">
+                        <div class="progress-bar-fill fill-red" style="width:22%"></div>
+                      </div>
+                      <span style="font-size:12px;font-weight:700">22%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-delayed">Delayed</span></td>
+                  <td><a href="project-detail.html" class="btn btn-secondary btn-sm">Buka</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Activity feed -->
+        <div class="card" style="width:280px;flex-shrink:0">
+          <div class="card-header">
+            <div class="card-title">Aktivitas Terkini</div>
+          </div>
+          <div style="padding:8px 0">
+            <!-- Activity items -->
+            <div style="padding:10px 16px;border-bottom:1px solid #f1f5f9;display:flex;gap:10px;align-items:flex-start">
+              <div class="avatar av-blue" style="width:24px;height:24px;font-size:9px;margin-top:1px">AK</div>
+              <div>
+                <div style="font-size:12px;color:#0f172a;line-height:1.4"><strong>Gap Assessment</strong> diperbarui — Klausul 6</div>
+                <div style="font-size:11px;color:#94a3b8;margin-top:2px">ABC Finance • 14 mnt lalu</div>
+              </div>
+            </div>
+            <div style="padding:10px 16px;border-bottom:1px solid #f1f5f9;display:flex;gap:10px;align-items:flex-start">
+              <div class="avatar av-violet" style="width:24px;height:24px;font-size:9px;margin-top:1px">BR</div>
+              <div>
+                <div style="font-size:12px;color:#0f172a;line-height:1.4"><strong>3 evidence</strong> diunggah ke Risk Register</div>
+                <div style="font-size:11px;color:#94a3b8;margin-top:2px">Nusantara Mfg • 1 jam lalu</div>
+              </div>
+            </div>
+            <div style="padding:10px 16px;border-bottom:1px solid #f1f5f9;display:flex;gap:10px;align-items:flex-start">
+              <div class="avatar av-emerald" style="width:24px;height:24px;font-size:9px;margin-top:1px">DW</div>
+              <div>
+                <div style="font-size:12px;color:#0f172a;line-height:1.4">Finding <strong>"MFA Policy"</strong> ditutup</div>
+                <div style="font-size:11px;color:#94a3b8;margin-top:2px">ABC Finance • 2 jam lalu</div>
+              </div>
+            </div>
+            <div style="padding:10px 16px;border-bottom:1px solid #f1f5f9;display:flex;gap:10px;align-items:flex-start">
+              <div class="avatar av-rose" style="width:24px;height:24px;font-size:9px;margin-top:1px">SP</div>
+              <div>
+                <div style="font-size:12px;color:#0f172a;line-height:1.4">Report <strong>Quarterly Gap</strong> digenerate</div>
+                <div style="font-size:11px;color:#94a3b8;margin-top:2px">GovTech • 5 jam lalu</div>
+              </div>
+            </div>
+            <div style="padding:10px 16px;display:flex;gap:10px;align-items:flex-start">
+              <div class="avatar av-amber" style="width:24px;height:24px;font-size:9px;margin-top:1px">AK</div>
+              <div>
+                <div style="font-size:12px;color:#0f172a;line-height:1.4">Template <strong>IS-POL-001</strong> diterbitkan</div>
+                <div style="font-size:11px;color:#94a3b8;margin-top:2px">ABC Finance • Kemarin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- UPCOMING DEADLINES + OPEN FINDINGS -->
+      <div class="flex gap-20" style="align-items:flex-start">
+
+        <!-- Upcoming deadlines -->
+        <div class="card" style="flex:1">
+          <div class="card-header">
+            <div class="card-title">Upcoming Deadlines</div>
+            <span class="tag">30 hari ke depan</span>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Project</th>
+                  <th>Due Date</th>
+                  <th>Sisa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:600">Selesai Gap Assessment Klausul 8-10</td>
+                  <td><span style="font-size:11.5px;color:#475569">ABC Finance</span></td>
+                  <td style="font-weight:600;color:#dc2626">20 Jan 2025</td>
+                  <td><span class="badge badge-critical">5 hari</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600">Submit Risk Register draft</td>
+                  <td><span style="font-size:11.5px;color:#475569">Nusantara Mfg</span></td>
+                  <td style="font-weight:600;color:#b45309">28 Jan 2025</td>
+                  <td><span class="badge badge-medium">13 hari</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600">Internal audit pertama</td>
+                  <td><span style="font-size:11.5px;color:#475569">ABC Finance</span></td>
+                  <td style="font-weight:600">15 Feb 2025</td>
+                  <td><span class="badge badge-low">31 hari</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600">Evidence collection — Annex A.5</td>
+                  <td><span style="font-size:11.5px;color:#475569">GovTech</span></td>
+                  <td style="font-weight:600">18 Feb 2025</td>
+                  <td><span class="badge badge-low">34 hari</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Open findings summary -->
+        <div class="card" style="width:280px;flex-shrink:0">
+          <div class="card-header">
+            <div class="card-title">Open Findings</div>
+            <a href="tasks-findings.html" class="btn btn-ghost btn-sm">Lihat →</a>
+          </div>
+          <div style="padding:12px 16px">
+            <div style="display:flex;gap:8px;margin-bottom:14px">
+              <div style="flex:1;background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:22px;font-weight:800;color:#dc2626">2</div>
+                <div style="font-size:10px;font-weight:600;color:#dc2626;text-transform:uppercase">Critical</div>
+              </div>
+              <div style="flex:1;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:22px;font-weight:800;color:#c2410c">2</div>
+                <div style="font-size:10px;font-weight:600;color:#c2410c;text-transform:uppercase">High</div>
+              </div>
+              <div style="flex:1;background:#fefce8;border:1px solid #fde68a;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:22px;font-weight:800;color:#a16207">3</div>
+                <div style="font-size:10px;font-weight:600;color:#a16207;text-transform:uppercase">Medium</div>
+              </div>
+            </div>
+            <div style="border-top:1px solid #f1f5f9;padding-top:12px">
+              <div style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:12px;color:#475569">Missing MFA policy</span>
+                <span class="badge badge-critical" style="font-size:10px">Critical</span>
+              </div>
+              <div style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:12px;color:#475569">Patch management gap</span>
+                <span class="badge badge-critical" style="font-size:10px">Critical</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:12px;color:#475569">Vendor assessment overdue</span>
+                <span class="badge badge-high" style="font-size:10px">High</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
